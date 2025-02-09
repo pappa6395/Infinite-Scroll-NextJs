@@ -27,7 +27,7 @@ const LoadMore = () => {
         const newRecipes = await fetchRecipes(nextPage) ?? [];
         if (!newRecipes || !Array.isArray(newRecipes)) {
             console.error("Unexpected API response:", newRecipes);
-            return []; // Return an empty array instead of undefined
+            return [];
           }
       
         setFoodLoaded((prevRecipes: Recipes[]) => [...prevRecipes, ...newRecipes]);

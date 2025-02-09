@@ -12,7 +12,7 @@ export async function fetchRecipes(limit: number) {
         console.log(data);
         if (!data || !Array.isArray(data.recipes)) {
             console.error("Unexpected API response:", data);
-            return []; // Return an empty array instead of undefined
+            return [];
           }
         return data.recipes as Recipes[];
 
